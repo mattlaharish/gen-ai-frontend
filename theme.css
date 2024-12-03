@@ -8,7 +8,8 @@ body {
 
 
 /* #header button .MuiAvatar-root.MuiAvatar-circular, */
-button#upload-button /* Attachment Button */ {
+/* #header button .MuiAvatar-root.MuiAvatar-circular, */
+button#upload-button, button#upload-button-loading /* Attachment Button */ {
     display:none!important; opacity: 0!important;
 }
 
