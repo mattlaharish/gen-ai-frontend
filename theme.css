@@ -1,0 +1,154 @@
+body {
+    --theme: light; /* Force light theme */
+}
+/**
+ 
+*/
+.watermark { visibility: hidden!important; opacity: 0!important; }
+
+
+/* #header button .MuiAvatar-root.MuiAvatar-circular, */
+button#upload-button /* Attachment Button */ {
+    display:none!important; opacity: 0!important;
+}
+
+/* Read Me Button */
+button#readme-button > span, #instructions-dialog > span { display:none; }
+button#readme-button > span.MuiButton-startIcon { display: inherit; }
+button#readme-button::after, #instructions-dialog::after { content: "About Gen AI"; }
+
+button[id^="starter-"] {
+	background: #EAF6FF;
+    box-shadow: 0px 12.75px 40px 5px #7090b028;
+}
+
+button[id^="starter-"]:hover {
+	background: rgb(229, 246, 253);
+    box-shadow: 0px 12.75px 40px 5px #7090B04D;
+}
+
+.css-m2icte {
+    border-radius: 0!important;
+    height: 90px!important;
+    width: 90px!important;
+}
+.css-m2icte > img {
+    border-radius: 0!important;
+    height: 80%!important;
+    width: auto!important;
+}
+
+button[id^="starter-"] > img {
+	border-radius: 0px!important;
+}
+
+button#starter-rate-card-benchmarks {
+	cursor: none!important;
+	background: #ffffff;
+    box-shadow: 0px 12.75px 40px 5px #7090b028;
+	opacity: 0.75;
+    user-select: none;
+}
+button#starter-rate-card-benchmarks:after {
+    content: "Coming Soon!";
+    position: absolute;
+    background: rgb(229 246 253 / 40%);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5% 0 15% 0;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 15px;
+}
+
+button[id^="starter-"] .css-i212uf {
+    font-size: 15px;
+    color: #414D55;
+    font-weight: 500;
+}
+
+/* button#new-chat-button,
+button#custom-new-chat-button {
+    line-height: 19px;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(15.46deg, #110061 26.3%, #905dd4 91.13%);
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    padding: 9px 25px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+} */
+
+/* button#custom-new-chat-button {
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    outline: 0px;
+    margin: 0px;
+    text-decoration: none;
+    flex: 0 0 auto;
+    overflow: visible;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button#custom-new-chat-button {
+    margin-bottom: 15px;
+} */
+
+
+button#new-chat-button:after, button#custom-new-chat-button:after {
+    /* content: " New Chat"; */
+    margin-left: 5px;
+}
+
+.css-vubbuv {
+    fill: rgb(1, 67, 97)!important;
+}
+
+/* Input text area */
+.chat-input-wrapper .MuiInputBase-formControl {
+    border-radius: 25px;
+    border: 1px solid #E2E8F0;
+}
+
+/* .chat-history-drawer .MuiDrawer-paperAnchorLeft .MuiAlert-root .MuiAlert-message {
+    display:none !important;
+} */
+
+/* .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-standardInfo.MuiAlert-standard {
+    display: none;
+} */
+
+@media (min-width: 1200px) {
+
+    /* Logo */
+    .chat-history-drawer .MuiDrawer-paperAnchorLeft img[alt="logo"],     
+    #header img[alt="logo"],
+    .css-3hcm5q img {
+        max-height: 45px!important;
+    }    
+
+	.css-3zx7e6 {
+		flex-basis: 50%!important;
+		-webkit-box-flex: 0;
+		flex-grow: 0;
+		max-width: 50%!important;
+	}
+
+	button[id^="starter-"] img {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 0 !important;
+	}
+}
