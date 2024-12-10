@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function () {
                 // event.preventDefault();
                 console.log("A 'source doc' link was clicked:", event.target.textContent);
-                const parentElement = document.getElementById("iframe-container");
+                const parentElement = document.querySelector("#side-view-content .markdown-body");
                 // Append the iframe as HTML
                 if (parentElement) {
                     let html_content = parentElement.innerHTML
