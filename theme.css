@@ -157,3 +157,7 @@ button#new-chat-button:after, button#custom-new-chat-button:after {
 #side-view-content .markdown-body {
   display: none;
 }
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-standardError.MuiAlert-standard {
+  display: none;
+}
