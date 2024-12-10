@@ -30,8 +30,14 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function () {
                 // event.preventDefault();
                 console.log("A 'source doc' link was clicked:", event.target.textContent);
-                const html_content= document.getElementById("iframe-container"); 
-                $("#side-view-content .markdown-body").innerHTML = html_content
+                const parentElement = document.getElementById("iframe-container");
+                // Append the iframe as HTML
+                if (parentElement) {
+                    let html_content = parentElement.innerHTML
+                    parentElement.innerHTML = html_content
+                } else {
+                    console.error("Parent element not found!");
+                }
             }, 120);
         }
     });
