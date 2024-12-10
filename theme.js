@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const parentElement = document.querySelector("#side-view-content .markdown-body");
                 // Append the iframe as HTML
                 if (parentElement) {
-                    let html_content = parentElement.innerHTML
+                    let html_content = parentElement.textContent
                     parentElement.innerHTML = html_content
                 } else {
                     console.error("Parent element not found!");
