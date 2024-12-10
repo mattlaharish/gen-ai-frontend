@@ -153,3 +153,7 @@ button#new-chat-button:after, button#custom-new-chat-button:after {
         border-radius: 0 !important;
 	}
 }
+
+#side-view-content .markdown-body {
+  display: none;
+}
