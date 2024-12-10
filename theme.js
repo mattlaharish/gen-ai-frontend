@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     console.error("Parent element not found!");
                 }
-            }, 120);
+            }, 1000);
         }
     });
 });
