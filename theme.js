@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function () {
                 // event.preventDefault();
                 console.log("A 'source doc' link was clicked:", event.target.textContent);
-                const html_content = $("#side-view-content .markdown-body").textContent
+                const html_content= document.getElementById("iframe-container"); 
                 $("#side-view-content .markdown-body").innerHTML = html_content
             }, 120);
         }
