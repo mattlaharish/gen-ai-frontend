@@ -22,4 +22,17 @@ document.addEventListener('DOMContentLoaded', function () {
         // }
 
     }, 1000);
+
+    const parentElement = document.body; // Replace with a more specific container if possible
+
+    parentElement.addEventListener("click", function (event) {
+        if (event.target.classList.contains("element-link")) {
+            setTimeout(function () {
+                // event.preventDefault();
+                console.log("A 'source doc' link was clicked:", event.target.textContent);
+                const html_content = $("#side-view-content .markdown-body").textContent
+                $("#side-view-content .markdown-body").innerHTML = html_content
+            }, 120);
+        }
+    });
 });
