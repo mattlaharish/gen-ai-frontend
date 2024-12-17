@@ -35,6 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (parentElement) {
                     let html_content = parentElement.textContent
                     parentElement.innerHTML = html_content
+                    document.querySelectorAll('#side-view-content .markdown-body').forEach(element => {
+                      element.style.display = '';
+                    });
                 } else {
                     console.error("Parent element not found!");
                 }
