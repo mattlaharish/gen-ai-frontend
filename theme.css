@@ -165,3 +165,12 @@ button#new-chat-button:after, button#custom-new-chat-button:after {
 .message-content .MuiImageList-root div.MuiBox-root {
     background-color: unset !important;
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
