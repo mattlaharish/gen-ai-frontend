@@ -163,7 +163,11 @@ button#new-chat-button:after, button#custom-new-chat-button:after {
 }
 
 .message-content .MuiImageList-root div.MuiBox-root {
-    background-color: unset !important;
+    	background-color: unset !important;
+	padding: 0px;
+}
+.message-content .MuiImageList-root div.MuiBox-root .inline-image {
+	margin: 0px;
 }
 
 @keyframes spin {
