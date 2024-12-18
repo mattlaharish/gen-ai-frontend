@@ -25,21 +25,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const parentElement = document.body; // Replace with a more specific container if possible
 
-    parentElement.addEventListener("click", function (event) {
-        if (event.target.classList.contains("element-link")) {
-            setTimeout(function () {
-                // event.preventDefault();
-                console.log("A 'source doc' link was clicked:", event.target.textContent);
-                const parentElement = document.querySelector("#side-view-content .markdown-body");
-                // Append the iframe as HTML
-                if (parentElement) {
-                    let html_content = parentElement.textContent
-                    parentElement.innerHTML = html_content
-                    document.querySelectorAll('#side-view-content .markdown-body')[0].className = document.querySelectorAll('#side-view-content .markdown-body')[0].className + "show" 
-                } else {
-                    console.error("Parent element not found!");
-                }
-            }, 1000);
-        }
-    });
+    // parentElement.addEventListener("click", function (event) {
+    //     if (event.target.classList.contains("element-link")) {
+    //         setTimeout(function () {
+    //             // event.preventDefault();
+    //             console.log("A 'source doc' link was clicked:", event.target.textContent);
+    //             const parentElement = document.querySelector("#side-view-content .markdown-body");
+    //             // Append the iframe as HTML
+    //             if (parentElement) {
+    //                 let html_content = parentElement.textContent
+    //                 parentElement.innerHTML = html_content
+    //                 document.querySelectorAll('#side-view-content .markdown-body')[0].className = document.querySelectorAll('#side-view-content .markdown-body')[0].className + "show" 
+    //             } else {
+    //                 console.error("Parent element not found!");
+    //             }
+    //         }, 1000);
+    //     }
+    // });
 });
