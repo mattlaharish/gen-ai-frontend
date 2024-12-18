@@ -161,3 +161,7 @@ button#new-chat-button:after, button#custom-new-chat-button:after {
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-standardError.MuiAlert-standard {
   display: none;
 }
+
+.message-content .MuiImageList-root div.MuiBox-root {
+    background-color: unset !important;
+}
