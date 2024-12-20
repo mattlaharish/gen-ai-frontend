@@ -178,3 +178,15 @@ button#new-chat-button:after, button#custom-new-chat-button:after {
     transform: rotate(360deg);
   }
 }
+
+div#root{
+	background-image: url('https://raw.githubusercontent.com/mattlaharish/gen-ai-frontend/dev/iStock-1502033887.png');
+}
+.MuiBox-root.css-kjafn5{
+	top: 17px;
+	left: 15px;
+	gap: 0px;
+	border-radius: 15px 0px 0px 0px;
+	border: 0.5px 0px 0px 0px;
+	opacity: 0px;
+}
