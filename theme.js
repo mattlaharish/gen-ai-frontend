@@ -42,4 +42,68 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 1000);
         }
     });
+    setTimeout(function () {
+        let newChatButton = '<div class="suggestions d-none" id="suggestions"></div>';
+        insertAfter(document.querySelector('#chat-input'), newChatButton);
+        const suggestionsList = [
+            "What should we do if a customer doesn't want help in the fitting room?",
+            "Who checks the q02. Fitting Room Log and how often?",
+            "What if there's no Mall Security to handle suspected shoplifting?",
+            "How do we train staff to use recovery phrases without sounding rude?",
+            "What happens to personal items left behind if no one claims them?",
+            "What steps should associates take if damage to fitting room fixtures is observed?",
+            "What are the steps for good house keeping in the fitting rooms?"
+        ];
+
+        const searchBox = document.getElementById('chat-input');
+        const suggestionsContainer = document.getElementById('suggestions');
+        searchBox.addEventListener('input', () => {
+            const query = searchBox.value.toLowerCase();
+            suggestionsContainer.innerHTML = '';
+
+            if (query) {
+                const filteredSuggestions = suggestionsList.filter(item =>
+                item.toLowerCase().includes(query)
+                );
+
+                if (filteredSuggestions.length > 0) {
+                    suggestionsContainer.classList.remove('d-none');
+                } else {
+                    suggestionsContainer.classList.add('d-none');
+                }
+
+                filteredSuggestions.forEach(suggestion => {
+                const suggestionItem = document.createElement('div');
+                suggestionItem.classList.add('suggestion-item');
+
+                // Highlight the matched portion
+                const startIndex = suggestion.toLowerCase().indexOf(query);
+                const endIndex = startIndex + query.length;
+
+                const highlightedText = `${suggestion.slice(0, startIndex)}<span class="highlight">${suggestion.slice(startIndex, endIndex)}</span>${suggestion.slice(endIndex)}`;
+
+                suggestionItem.innerHTML = highlightedText.trim();
+
+                // suggestionItem.textContent = suggestion;
+
+                suggestionItem.addEventListener('click', () => {
+                    searchBox.value = suggestion;
+                    suggestionsContainer.innerHTML = '';
+                    suggestionsContainer.classList.add('d-none');
+                });
+
+                suggestionsContainer.appendChild(suggestionItem);
+                });
+            }else{
+                suggestionsContainer.classList.add('d-none');
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.search-container')) {
+                suggestionsContainer.innerHTML = '';
+                suggestionsContainer.classList.add('d-none');
+            }
+        });
+    }, 1000);
 });

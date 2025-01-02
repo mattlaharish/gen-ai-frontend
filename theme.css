@@ -1,3 +1,171 @@
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em
+}
+
+code.hljs {
+    padding: 3px 5px
+}
+
+.hljs {
+    background: #23241f;
+    color: #f8f8f2
+}
+
+.hljs-tag,.hljs-subst {
+    color: #f8f8f2
+}
+
+.hljs-strong,.hljs-emphasis {
+    color: #a8a8a2
+}
+
+.hljs-bullet,.hljs-quote,.hljs-number,.hljs-regexp,.hljs-literal,.hljs-link {
+    color: #ae81ff
+}
+
+.hljs-code,.hljs-title,.hljs-section,.hljs-selector-class {
+    color: #a6e22e
+}
+
+.hljs-strong {
+    font-weight: 700
+}
+
+.hljs-emphasis {
+    font-style: italic
+}
+
+.hljs-keyword,.hljs-selector-tag,.hljs-name,.hljs-attr {
+    color: #f92672
+}
+
+.hljs-symbol,.hljs-attribute {
+    color: #66d9ef
+}
+
+.hljs-params,.hljs-title.class_,.hljs-class .hljs-title {
+    color: #f8f8f2
+}
+
+.hljs-string,.hljs-type,.hljs-built_in,.hljs-selector-id,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-addition,.hljs-variable,.hljs-template-variable {
+    color: #e6db74
+}
+
+.hljs-comment,.hljs-deletion,.hljs-meta {
+    color: #75715e
+}
+
+.react-resizable {
+    position: relative
+}
+
+.react-resizable-handle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    box-sizing: border-box;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2IDYiIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiNmZmZmZmYwMCIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iNnB4Ij48ZyBvcGFjaXR5PSIwLjMwMiI+PHBhdGggZD0iTSA2IDYgTCAwIDYgTCAwIDQuMiBMIDQgNC4yIEwgNC4yIDQuMiBMIDQuMiAwIEwgNiAwIEwgNiA2IEwgNiA2IFoiIGZpbGw9IiMwMDAwMDAiLz48L2c+PC9zdmc+);
+    background-position: bottom right;
+    padding: 0 3px 3px 0
+}
+
+.react-resizable-handle-sw {
+    bottom: 0;
+    left: 0;
+    cursor: sw-resize;
+    transform: rotate(90deg)
+}
+
+.react-resizable-handle-se {
+    bottom: 0;
+    right: 0;
+    cursor: se-resize
+}
+
+.react-resizable-handle-nw {
+    top: 0;
+    left: 0;
+    cursor: nw-resize;
+    transform: rotate(180deg)
+}
+
+.react-resizable-handle-ne {
+    top: 0;
+    right: 0;
+    cursor: ne-resize;
+    transform: rotate(270deg)
+}
+
+.react-resizable-handle-w,.react-resizable-handle-e {
+    top: 50%;
+    margin-top: -10px;
+    cursor: ew-resize
+}
+
+.react-resizable-handle-w {
+    left: 0;
+    transform: rotate(135deg)
+}
+
+.react-resizable-handle-e {
+    right: 0;
+    transform: rotate(315deg)
+}
+
+.react-resizable-handle-n,.react-resizable-handle-s {
+    left: 50%;
+    margin-left: -10px;
+    cursor: ns-resize
+}
+
+.react-resizable-handle-n {
+    top: 0;
+    transform: rotate(225deg)
+}
+
+.react-resizable-handle-s {
+    bottom: 0;
+    transform: rotate(45deg)
+}
+
+.markdown-body {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.markdown-body img {
+    max-width: 100%
+}
+
+.markdown-body p {
+    white-space:break-spaces;
+    font-size: 14px;
+    color: black;
+    font-weight: 100;
+    font-family: Inter, sans-serif;
+}
+
+.ai-message .markdown-body>:first-child {
+    margin-top: 0
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+code {
+    font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace
+}
+
+
 body {
     --theme: light; /* Force light theme */
 }
@@ -21,6 +189,7 @@ button#readme-button::after, #instructions-dialog::after { content: "About Gen A
 button[id^="starter-"] {
 	background: #EAF6FF;
     box-shadow: 0px 12.75px 40px 5px #7090b028;
+    height: auto !important;
 }
 
 button[id^="starter-"]:hover {
@@ -68,12 +237,12 @@ button[id^="starter-"] .css-i212uf {
     font-weight: 500;
 }
 
-/* button#new-chat-button,
+button#new-chat-button,
 button#custom-new-chat-button {
     line-height: 19px;
     text-align: center;
     align-items: center;
-    background: linear-gradient(15.46deg, #110061 26.3%, #905dd4 91.13%);
+    background: linear-gradient(15.46deg, #fe7e74 26.3%, #905dd4 91.13%);
     border: none;
     border-radius: 20px;
     color: #fff;
@@ -81,9 +250,9 @@ button#custom-new-chat-button {
     width: 100%;
     font-size: 15px;
     font-weight: 600;
-} */
+}
 
-/* button#custom-new-chat-button {
+button#custom-new-chat-button {
     display: inline-flex;
     -webkit-box-align: center;
     -webkit-box-pack: center;
@@ -105,11 +274,12 @@ button#custom-new-chat-button {
 
 button#custom-new-chat-button {
     margin-bottom: 15px;
-} */
+}
 
 
 button#new-chat-button:after, button#custom-new-chat-button:after {
-    /* content: " New Chat"; */
+    content: " New Chat";
+    font-size: 13px;
     margin-left: 5px;
 }
 
@@ -179,14 +349,444 @@ button#new-chat-button:after, button#custom-new-chat-button:after {
   }
 }
 
-div#root{
-	background-image: url('https://raw.githubusercontent.com/mattlaharish/gen-ai-frontend/dev/iStock-1502033887.png');
+body{
+	background-image: url(https://raw.githubusercontent.com/mattlaharish/gen-ai-frontend/dev/iStock-1502033887.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover  !important;
+    background-attachment: scroll  !important;
 }
-.MuiBox-root.css-kjafn5{
-	top: 17px;
-	left: 15px;
-	gap: 0px;
-	border-radius: 15px 0px 0px 0px;
-	border: 0.5px 0px 0px 0px;
+
+.MuiDrawer-root.MuiDrawer-docked.chat-history-drawer.css-8sf169 {
+	padding: 15px;
+    border-radius: 15px;
+	border: 0.5px 0px 0px 0px  solid;
 	opacity: 0px;
+}
+
+.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.css-1nw3w5l {
+    border: 0.5px solid;
+    border-image-source: linear-gradient(177.39deg, rgba(255, 255, 255, 0.38) 3.58%, #f2b1ad 97.82%) !important;
+    border-image-slice: 1; /* Ensures the gradient spans the entire border */
+    border-top: none; /* Remove the top border */
+    border-image-slice: 1; /* Ensures the gradient spans the entire border */
+    /* border-radius: 15px; */
+}
+
+/* .MuiInputBase-formControl.MuiInputBase-multiline.MuiInputBase-adornedStart.MuiInputBase-adornedEnd.css-1fbn754 {
+    border: 0.5px solid #f2b1ad;
+    border-radius: 15px;
+} */
+
+.css-43tnih {
+    border: 0.5px solid #f2b1ad;
+}
+
+.MuiBox-root.css-1vm5bg2{
+    background-image: url("https://raw.githubusercontent.com/mattlaharish/gen-ai-frontend/dev/brand-puma-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px 200px;
+    /* border: 1px solid #FFFFFF; */
+    /* background: linear-gradient(0deg, #F0F1F2, #F0F1F2), radial-gradient(50% 50% at 50% 50%, #262626 0%, #252525 100%); */
+    backdrop-filter: blur(74px);
+    margin: 0px 100px 10px 100px;
+    border-radius: 15px;
+    padding-top: 10px;
+}
+
+.css-1vm5bg2::-webkit-scrollbar {
+    width: 2px; /* Scrollbar width */
+}
+
+.css-1vm5bg2::-webkit-scrollbar-thumb {
+    /* background-color: #888; */
+    background: linear-gradient(15.46deg, #fe7e74 26.3%, #905dd4 91.13%);
+    border-radius: 2px; /* Rounded edges */
+}
+  
+.css-1vm5bg2::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker thumb color when hovered */
+}
+
+.MuiBox-root.css-6225ze {
+    border: 0.5px solid #f2b1ad;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+
+.css-1yvzil2 {
+    background-color: unset !important;
+}
+
+.css-1yvzil2 > .css-1ofqig9 > .css-h7sokr > .markdown-body > p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.MuiStack-root.css-kfav3h {
+    border: 0.5px solid #d7d7d7;
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(100px);
+    background: linear-gradient(135deg, rgb(255 250 250 / 90%) 20%, rgb(243 176 172 / 70%) 50%, rgb(253 253 253 / 50%) 100%);
+}
+
+.css-11rfqcx {
+    color: #f80061;
+}
+
+.css-2ov0jh {
+    border-radius: 120px;
+}
+
+.css-mww0i9{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    max-width: min(51rem, 100vw) !important;
+}
+
+.css-15ec3ep{
+    font-weight: bolder !important;
+}
+
+.css-1eeuox8 {
+    font-weight: 100 !important;
+}
+
+code {
+    font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace
+}
+
+.css-y2chha{
+    opacity: 9999;
+}
+
+.search-container {
+    position: relative;
+    width: 300px;
+}
+#search-box {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.suggestions {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    /* border: 1px solid #ccc; */
+    /* border-bottom: none; */
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+    margin: 2px 20px;
+}
+.suggestion-item {
+    padding: 8px 10px;
+    cursor: pointer;
+    background: #fff;
+    color: #0d0d0d;
+    border-bottom: .2px solid #b4b4b4;
+    /* border-radius: 4px; */
+    margin-bottom: 2px;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+
+}
+.suggestion-item:hover {
+    /* background: #f0f0f0; */
+    background: rgb(5 73 104);
+    color: white;
+}
+
+.d-none {
+    display: none;
+}
+
+.highlight {
+    /* font-weight: bold; */
+    color: #b4b4b4 !important;
+}
+
+.suggestions::-webkit-scrollbar {
+    width: 2px; /* Scrollbar width */
+}
+
+.suggestions::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scrollbar thumb color */
+    border-radius: 2px; /* Rounded edges */
+}
+  
+.suggestions::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker thumb color when hovered */
+}
+
+/* .css-1uu7u3w {
+    display: none;
+}
+
+.css-ptht6r{
+    height: unset !important;
+}
+
+.css-j7qwjs{
+    display: none !important;
+}
+
+.css-d2l252 {
+    overflow-y:  unset !important;
+}
+
+.css-1fk7z1 > .MuiGrid-item {
+    min-width: 100% !important;
+    padding-top: 5px !important;
+}
+
+.css-1fk7z1{
+    display: contents;
+}
+
+button[id^="starter-"]{
+    height: 40px;
+    border-radius: 0px;
+} */
+
+button[id^="starter-"]{
+    background: linear-gradient(135deg, rgb(255 250 250 / 90%) 20%, rgb(243 176 172 / 70%) 50%, rgb(253 253 253 / 50%) 100%);
+}
+button[id^="starter-"]:hover {
+    background: unset !important;
+}
+.css-d2l252 {
+    overflow-y:  unset !important;
+}
+
+.css-1ecxs1h{
+    /* background: #FF2414 !important; */
+    background: linear-gradient(30deg, #ff6b6b 25%, #ff9e57 50%, #f5f5f5 90%) !important;
+}
+
+.css-m2icte > img {
+    height: 50px !important;
+}
+
+.css-1el3axn > button.css-1deacqj {
+    line-height: 19px;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(15.46deg, #fe7e74 26.3%, #905dd4 91.13%);
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    padding: 9px 25px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.css-1el3axn > button.css-1deacqj {
+    float: right;
+    width: 130px !important;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    outline: 0px;
+    margin: 0px;
+    text-decoration: none;
+    flex: 0 0 auto;
+    overflow: visible;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* .css-1el3axn > button.css-1deacqj:after {
+    margin-bottom: 15px;
+} */
+
+
+.css-1el3axn > button.css-1deacqj:after {
+    content: " New Chat";
+    font-size: 13px;
+    /* margin-left: 5px; */
+}
+
+.css-1el3axn > button.css-1deacqj svg {
+    display: none !important;
+}
+
+
+.css-1el3axn > button.css-1deacqj:before {
+    content: "";
+    position: absolute;
+    width: 12%;
+    left: 10%;
+    height: 40%;
+    background-image: url(https://raw.githubusercontent.com/mattlaharish/gen-ai-frontend/dev/Vector.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.css-1deacqj.Mui-disabled {
+    background: #c1c1c1 !important;
+}
+
+
+.css-1fbn754{
+    display: flex !important;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: space-between;
+}
+
+.css-1el3axn {
+    width: 100% !important;
+    margin-right: 25px;
+    color: rgb(97, 97, 97);
+}
+
+.css-1tudgoq {
+    display: none;
+}
+
+.css-43tnih textarea{
+    padding-bottom: 5px !important;
+    max-height: 10vh !important;
+    width: 95% !important;
+}
+
+
+.css-43tnih textarea::-webkit-scrollbar {
+    width: 2px; /* Scrollbar width */
+}
+
+.css-43tnih textarea::-webkit-scrollbar-thumb {
+    /* background-color: #888; */
+    background: linear-gradient(15.46deg, #fe7e74 26.3%, #905dd4 91.13%);
+    border-radius: 2px; /* Rounded edges */
+}
+  
+.css-43tnih textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker thumb color when hovered */
+}
+
+.css-1el3axn > button.css-1yxmbwk:after {
+    content: " Stop";
+    font-size: 13px;
+    /* margin-left: 5px; */
+}
+
+/* .css-1el3axn > button.css-1yxmbwk svg {
+    display: none !important;
+} */
+
+
+/* .css-1el3axn > button.css-1yxmbwk:before {
+    content: "";
+    position: absolute;
+    width: 12%;
+    left: 10%;
+    height: 40%;
+    background-image: url(https://raw.githubusercontent.com/mattlaharish/gen-ai-frontend/dev/Vector.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+
+
+.css-1el3axn > button.css-1yxmbwk {
+    line-height: 19px;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(15.46deg, #fe7e74 26.3%, #905dd4 91.13%);
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    padding: 9px 25px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.css-1el3axn > button.css-1yxmbwk {
+    float: right;
+    width: 75px !important;
+    height: 30px !important;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    outline: 0px;
+    margin: 0px;
+    text-decoration: none;
+    flex: 0 0 auto;
+    overflow: visible;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.css-vubbuv {
+    font-size: 14px;
+    fill: #fff !important
+}
+
+
+.css-1uu7u3w, .css-1xhj18k > span > .css-1deacqj.Mui-disabled {
+    display: none !important;
+}
+
+.css-1vtij9r{
+    background: linear-gradient(15.46deg, #fe7e74 26.3%, #905dd4 91.13%) !important;
+}
+
+.css-szdqnq, .css-1ruedog{
+    background: linear-gradient(15.46deg, #fe7e74 26.3%, #905dd4 91.13%) !important;
+    color: #fff !important;
+    border: unset !important;
+}
+
+
+.css-1yrxunr {
+    border: unset !important;
+    background: rgb(255, 231, 235) !important;
+    color: rgb(248, 0, 97) !important;
+}
+
+
+.css-ptht6r{
+    height: unset !important;
+}
+
+.MuiStack-root.css-j7qwjs:after {
+    content: "Welcome to Policy AI - Empowering smarter decisions for a better future. Let's shape impactful policies together!";
+    background: linear-gradient(135deg, rgb(255 255 255 / 90%) 20%, rgb(255 255 255 / 70%) 50%, rgb(255 255 255 / 50%) 100%);
+    padding: 10px;
+    border: 0.5px solid #d7d7d7;
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(100px);
+    background: linear-gradient(135deg, rgb(255 250 250 / 90%) 20%, rgb(243 176 172 / 70%) 50%, rgb(253 253 253 / 50%) 100%);
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.css-1rplq84 .css-vubbuv {
+    fill: rgb(1, 67, 97) !important;
 }
