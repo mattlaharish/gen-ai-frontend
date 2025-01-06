@@ -42,22 +42,25 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 1000);
         }
     });
-    setTimeout(function () {
-        let newChatButton = '<div class="suggestions d-none" id="suggestions"></div>';
-        insertAfter(document.querySelector('#chat-input'), newChatButton);
-        const suggestionsList = [
-            "What should we do if a customer doesn't want help in the fitting room?",
-            "Who checks the q02. Fitting Room Log and how often?",
-            "What if there's no Mall Security to handle suspected shoplifting?",
-            "How do we train staff to use recovery phrases without sounding rude?",
-            "What happens to personal items left behind if no one claims them?",
-            "What steps should associates take if damage to fitting room fixtures is observed?",
-            "What are the steps for good house keeping in the fitting rooms?"
-        ];
-
-        const searchBox = document.getElementById('chat-input');
-        const suggestionsContainer = document.getElementById('suggestions');
-        searchBox.addEventListener('input', () => {
+    let newChatButton = '<div class="suggestions d-none" id="suggestions"></div>';
+    const suggestionsList = [
+        "What should we do if a customer doesn't want help in the fitting room?",
+        "Who checks the q02. Fitting Room Log and how often?",
+        "What if there's no Mall Security to handle suspected shoplifting?",
+        "How do we train staff to use recovery phrases without sounding rude?",
+        "What happens to personal items left behind if no one claims them?",
+        "What steps should associates take if damage to fitting room fixtures is observed?",
+        "What are the steps for good house keeping in the fitting rooms?"
+    ];
+    document.body.addEventListener('input', (event) => {
+        if (event.target.id === 'chat-input') {
+            if(!document.getElementById("suggestions")){
+                console.log(document.getElementById("suggestions"));
+                insertAfter(document.querySelector('#chat-input'), newChatButton);
+            }
+            const searchBox = document.getElementById('chat-input');
+            const suggestionsContainer = document.getElementById('suggestions');
+            console.log("hereee");
             const query = searchBox.value.toLowerCase();
             suggestionsContainer.innerHTML = '';
 
@@ -97,13 +100,16 @@ document.addEventListener('DOMContentLoaded', function () {
             }else{
                 suggestionsContainer.classList.add('d-none');
             }
-        });
+        }
+    });
 
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.search-container')) {
+    document.body.addEventListener('click', (event) => {
+        if (event.target.id === 'suggestions') {
+            const suggestionsContainer = document.getElementById('suggestions');
+            if (!event.target.closest('.search-container')) {
                 suggestionsContainer.innerHTML = '';
                 suggestionsContainer.classList.add('d-none');
             }
-        });
-    }, 1000);
+        }
+    });
 });
