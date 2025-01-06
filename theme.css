@@ -808,7 +808,7 @@ button[id^="starter-"]:hover {
     position: absolute;
     width: 50px;
     height: 30px;
-    background-image: url(http://localhost/gen-ai-frontend-dev/wave.png);
+    background-image: url(https://raw.githubusercontent.com/mattlaharish/gen-ai-frontend/dev/wave.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
