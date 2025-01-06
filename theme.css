@@ -396,6 +396,7 @@ body{
 
 .css-1vm5bg2::-webkit-scrollbar {
     width: 2px; /* Scrollbar width */
+    height: 2px;
 }
 
 .css-1vm5bg2::-webkit-scrollbar-thumb {
@@ -442,6 +443,7 @@ body{
 .css-mww0i9{
     padding-left: 0px !important;
     padding-right: 0px !important;
+    padding-bottom: 0px !important;
     max-width: min(51rem, 100vw) !important;
 }
 
@@ -747,6 +749,9 @@ button[id^="starter-"]:hover {
     fill: #fff !important
 }
 
+.react-resizable.css-8qdnr8 .css-vubbuv {
+    fill: rgb(1, 67, 97)!important;
+}
 
 .css-1uu7u3w, .css-1xhj18k > span > .css-1deacqj.Mui-disabled {
     display: none !important;
@@ -789,4 +794,148 @@ button[id^="starter-"]:hover {
 
 .css-1rplq84 .css-vubbuv {
     fill: rgb(1, 67, 97) !important;
+}
+
+.MuiBox-root.css-y2chha:before {
+    content: "Analyzing...";
+    position: absolute;
+    margin-top: 2px;
+    font-size: 13px;
+}
+
+.MuiBox-root.css-y2chha:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-image: url(http://localhost/gen-ai-frontend-dev/wave.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 82px;
+}
+
+.MuiBox-root.css-y2chha {
+    border: 0.5px solid #d7d7d7;
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(100px);
+    background: linear-gradient(135deg, rgb(255 250 250 / 90%) 20%, rgb(243 176 172 / 70%) 50%, rgb(253 253 253 / 50%) 100%);
+    margin-left: 80px;
+    width: 86%;
+    height: 50px !important;
+    min-height: 50px;
+    background-size: 200% 100%;
+    animation: skeleton-animation 1.5s infinite;
+}
+
+/* Skeleton animation keyframes */
+@keyframes skeleton-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.css-tv76ad {
+    display: none !important;
+}
+
+/* .MuiBox-root.css-y2chha {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .MuiBox-root.css-y2chha:after {
+    border-radius: 2px;
+    animation: bounce 1.2s infinite ease-in-out;
+  }
+  @keyframes bounce {
+    0%, 100% {
+      transform: scaleX(0.4);
+      background-color: #d4e4ff;
+    }
+    50% {
+      transform: scaleX(1);
+      background-color: rgb(243 176 172 / 70%);
+    }
+  } */
+  
+  /* .MuiBox-root.css-y2chha {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    --num-bars: 8;
+    --bar-width: 6px;
+    --bar-margin: 3px;
+    --bar-color: #17a2b8;
+  }
+  
+  .MuiBox-root.css-y2chha::before {
+    content: '';
+    display: flex;
+    justify-content: space-between;
+    width: calc((var(--bar-width) + var(--bar-margin) * 2) * var(--num-bars) - var(--bar-margin));
+    height: 50px;
+  }
+  
+  .MuiBox-root.css-y2chha::before > div {
+    width: var(--bar-width);
+    height: 0;
+    background: var(--bar-color);
+    border-radius: 10px;
+    animation: loading 1.2s infinite;
+  }
+  
+  .MuiBox-root.css-y2chha::before > div:nth-child(n) {
+    animation-delay: calc(0.15s * (n - 1));
+  }
+  
+  @keyframes loading {
+    0% {
+      height: 0;
+    }
+    50% {
+      height: 50px;
+    }
+    100% {
+      height: 0;
+    }
+  } */
+.css-oa138a::-webkit-scrollbar {
+    width: 2px; /* Scrollbar width */
+}
+
+.css-oa138a::-webkit-scrollbar-thumb {
+    /* background-color: #888; */
+    background: linear-gradient(15.46deg, #fe7e74 26.3%, #905dd4 91.13%);
+    border-radius: 2px; /* Rounded edges */
+}
+
+.css-oa138a::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker thumb color when hovered */
+}
+
+.css-16jfcg4 {
+    padding: 8px !important;
+}
+.css-8sf169 .MuiDrawer-paper {
+    padding: 0px 12px !important; 
+}
+.css-dvxtzn{
+    display: none !important;
+}
+
+.css-1rplq84 {
+    margin-bottom: 0px !important;
 }
