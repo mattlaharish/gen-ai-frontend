@@ -91,8 +91,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 suggestionItem.addEventListener('click', () => {
                     searchBox.value = suggestion;
+                    searchBox.dispatchEvent(event);
                     suggestionsContainer.innerHTML = '';
                     suggestionsContainer.classList.add('d-none');
+                    var element = document.querySelector('button[class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-1deacqj"]');
+                    simulateMouseClick(element);
                 });
 
                 suggestionsContainer.appendChild(suggestionItem);
@@ -112,4 +115,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+
+    const mouseClickEvents = ['mousedown', 'click', 'mouseup'];
+    function simulateMouseClick(element){
+        mouseClickEvents.forEach(mouseEventType =>
+            element.dispatchEvent(
+            new MouseEvent(mouseEventType, {
+                view: window,
+                bubbles: true,
+                cancelable: true,
+                buttons: 1
+            })
+            )
+        );
+    }
 });
