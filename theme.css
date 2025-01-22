@@ -238,7 +238,7 @@ button[id^="starter-"] .css-i212uf {
 }
 
 button#new-chat-button,
-button#custom-new-chat-button {
+button#custom-new-chat-button, button#custom-new-upload-button {
     line-height: 19px;
     text-align: center;
     align-items: center;
@@ -250,6 +250,24 @@ button#custom-new-chat-button {
     width: 100%;
     font-size: 15px;
     font-weight: 600;
+}
+
+button#custom-new-upload-button a{
+    text-decoration: unset !important;
+    font-weight: unset !important;
+    color: unset;
+    line-height: unset !important;
+    font-size: 14px;
+
+}
+button#custom-new-upload-button{
+    padding: 3px 10px !important;
+}
+
+button#custom-new-upload-button svg{
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 2px;
 }
 
 button#custom-new-chat-button {
@@ -1052,42 +1070,28 @@ button[id^="starter-"]:hover {
   } */
 
 
-  .MuiBox-root.css-y2chha:before {
+/* .MuiBox-root.css-y2chha:before {
     content: "Analyzing...";
     position: absolute;
     margin-top: 2px;
     font-size: 13px;
-}
+} */
 
-.MuiBox-root.css-y2chha:after {
-    /* content: "";
-    position: absolute;
-    width: 50px;
-    height: 30px;
-    background-image: url(https://raw.githubusercontent.com/mattlaharish/gen-ai-frontend/dev/wave.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    left: 82px; */
+/* .MuiBox-root.css-y2chha:after {
     content: "";
     position: absolute;
-    /* width: 40px;
-    height: 30px; */
-    /* background-image: url(https://raw.githubusercontent.com/mattlaharish/gen-ai-frontend/dev/wave.png); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* left: 82px; */
     width: 3px;
     height: 25px;
     display: block;
     margin: auto;
     left: 75px;
-    /* position: relative; */
     border-radius: 5px;
     box-sizing: border-box;
     animation: animloader 1s linear infinite alternate;
-}
+} */
 
 @keyframes animloader {
     0% {
@@ -1127,99 +1131,7 @@ button[id^="starter-"]:hover {
     }
 }
 
-/* @keyframes animloader {
-    0% {
-        box-shadow: 
-            10px 0 rgb(243, 176, 172, 0.7),
-            20px 0 #f2f2f2,
-            30px 0 #f2f2f2,
-            40px 0 #f2f2f2,
-            50px 0 #f2f2f2,
-            60px 0 #f2f2f2,
-            70px 0 #f2f2f2,
-            80px 0 #f2f2f2;
-    }
-    15% {
-        box-shadow: 
-            10px 0 #f2f2f2,
-            20px 0 rgb(243, 176, 172, 0.7),
-            30px 0 #f2f2f2,
-            40px 0 #f2f2f2,
-            50px 0 #f2f2f2,
-            60px 0 #f2f2f2,
-            70px 0 #f2f2f2,
-            80px 0 #f2f2f2;
-    }
-    30% {
-        box-shadow: 
-            10px 0 #f2f2f2,
-            20px 0 #f2f2f2,
-            30px 0 rgb(243, 176, 172, 0.7),
-            40px 0 #f2f2f2,
-            50px 0 #f2f2f2,
-            60px 0 #f2f2f2,
-            70px 0 #f2f2f2,
-            80px 0 #f2f2f2;
-    }
-    45% {
-        box-shadow: 
-            10px 0 #f2f2f2,
-            20px 0 #f2f2f2,
-            30px 0 #f2f2f2,
-            40px 0 rgb(243, 176, 172, 0.7),
-            50px 0 #f2f2f2,
-            60px 0 #f2f2f2,
-            70px 0 #f2f2f2,
-            80px 0 #f2f2f2;
-    }
-    60% {
-        box-shadow: 
-            10px 0 #f2f2f2,
-            20px 0 #f2f2f2,
-            30px 0 #f2f2f2,
-            40px 0 #f2f2f2,
-            50px 0 rgb(243, 176, 172, 0.7),
-            60px 0 #f2f2f2,
-            70px 0 #f2f2f2,
-            80px 0 #f2f2f2;
-    }
-    75% {
-        box-shadow: 
-            10px 0 #f2f2f2,
-            20px 0 #f2f2f2,
-            30px 0 #f2f2f2,
-            40px 0 #f2f2f2,
-            50px 0 #f2f2f2,
-            60px 0 rgb(243, 176, 172, 0.7),
-            70px 0 #f2f2f2,
-            80px 0 #f2f2f2;
-    }
-    95% {
-        box-shadow: 
-            10px 0 #f2f2f2,
-            20px 0 #f2f2f2,
-            30px 0 #f2f2f2,
-            40px 0 #f2f2f2,
-            50px 0 #f2f2f2,
-            60px 0 #f2f2f2,
-            70px 0 rgb(243, 176, 172, 0.7),
-            80px 0 #f2f2f2;
-    }
-    100% {
-        box-shadow: 
-            10px 0 #f2f2f2,
-            20px 0 #f2f2f2,
-            30px 0 #f2f2f2,
-            40px 0 #f2f2f2,
-            50px 0 #f2f2f2,
-            60px 0 #f2f2f2,
-            70px 0 #f2f2f2,
-            80px 0 rgb(243, 176, 172, 0.7);
-    }
-} */
-
-
-.MuiBox-root.css-y2chha {
+/* .MuiBox-root.css-y2chha {
     border: 0.5px solid #d7d7d7;
     padding: 10px;
     border-radius: 15px;
@@ -1230,8 +1142,7 @@ button[id^="starter-"]:hover {
     height: 50px !important;
     min-height: 50px;
     background-size: 200% 100%;
-    /* animation: skeleton-animation 1.5s infinite; */
-}
+} */
 
 /* Skeleton animation keyframes */
 @keyframes skeleton-animation {
@@ -1245,3 +1156,54 @@ button[id^="starter-"]:hover {
       background-position: 0% 50%;
     }
 }
+
+
+
+.MuiBox-root.css-y2chha{
+    width: 100px;
+    height: 75px;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
+    border-radius: 100%;
+}
+.MuiBox-root.css-y2chha:before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    border: 15px solid transparent;
+    border-top: 25px solid #fff;
+    transform: rotate(45deg);
+    top: 50px;
+    left: -15px;
+}
+
+.MuiBox-root.css-y2chha:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    border-radius: 50%;
+    background-color: #FF3D00;
+    box-shadow: 20px 0 #FF3D00, -20px 0 #FF3D00;
+    animation: flash 0.5s ease-out infinite alternate;
+}
+
+@keyframes flash {
+    0% {
+        background-color: rgba(255, 60, 0, 0.25);
+        box-shadow: 20px 0 rgba(255, 60, 0, 0.25), -20px 0 #FF3D00;
+    }
+    50% {
+        background-color: #FF3D00;
+        box-shadow: 20px 0 rgba(255, 60, 0, 0.25), -20px 0 rgba(255, 60, 0, 0.25);
+    }
+    100% {
+        background-color: rgba(255, 60, 0, 0.25);
+        box-shadow: 20px 0 #FF3D00, -20px 0 rgba(255, 60, 0, 0.25);
+    }
+}
+    

@@ -8,20 +8,11 @@ const openNewChat = () => document.getElementById('new-chat-button').click();
 
 document.addEventListener('DOMContentLoaded', function () {
     // Add a delay before simulating the click
-    // setTimeout(function () {
-    //     let newChatButton = '<div class="MuiBox-root css-0"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button" id="custom-new-chat-button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vz303y" focusable="false" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4Z"></path></svg> <span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>';
-    //     insertBefore(document.querySelector('.css-oa138a'), newChatButton);
+    setTimeout(function () {
+        let newChatButton = `<div class="MuiBox-root css-0"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button" id="custom-new-upload-button"><a href="http://127.0.0.1:5000/"><svg xmlns="http://www.w3.org/2000/svg" width="" height="" viewBox="0 0 512 512" id="upload"><path fill="white" d="M398.1 233.2c0-1.2.2-2.4.2-3.6 0-65-51.8-117.6-115.7-117.6-46.1 0-85.7 27.4-104.3 67-8.1-4.1-17.2-6.5-26.8-6.5-29.5 0-54.1 21.9-58.8 50.5C57.3 235.2 32 269.1 32 309c0 50.2 40.1 91 89.5 91H224v-80h-48.2l80.2-83.7 80.2 83.6H288v80h110.3c45.2 0 81.7-37.5 81.7-83.4 0-45.9-36.7-83.2-81.9-83.3z"></path></svg> Upload</a></button></div>`;
+        insertAfter(document.querySelector('.css-14k6mw7 img'), newChatButton);
 
-    //            debugger;
-    //     const chatInput = document.querySelector('#chat-input');
-    //     if (chatInput) {
-    //         const chatInputWrapper = chatInput.closest('.MuiTextField-root');
-    //         if (chatInputWrapper) {
-    //             chatInputWrapper.classList.add('chat-input-wrapper');
-    //         }
-    //     }
-
-    // }, 1000);
+    }, 1000);
 
     const parentElement = document.body; // Replace with a more specific container if possible
 
@@ -30,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function () {
                 // event.preventDefault();
                 console.log("A 'source doc' link was clicked:", event.target.textContent);
-                const parentElement = document.querySelector("#side-view-content .markdown-body");
+                const parentElement = document.querySelector("#side-view-content div");
                 // Append the iframe as HTML
                 if (parentElement) {
                     let html_content = parentElement.textContent
