@@ -98,7 +98,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.body.addEventListener('click', (event) => {
-        if (event.target.id === 'suggestions') {
+        if(event.target.alt == "logo" && event.target.parentNode.className == "MuiStack-root css-14k6mw7"){
+            window.location.href = window.location.origin
+        }else if (event.target.id === 'suggestions') {
             const suggestionsContainer = document.getElementById('suggestions');
             if (!event.target.closest('.search-container')) {
                 suggestionsContainer.innerHTML = '';
