@@ -148,6 +148,9 @@ code.hljs {
     font-weight: 100;
     font-family: Inter, sans-serif;
 }
+p {
+    color: black !important;
+}
 
 .ai-message .markdown-body>:first-child {
     margin-top: 0
