@@ -1213,3 +1213,14 @@ button[id^="starter-"]:hover {
 img[alt="logo"] {
     cursor: pointer;
 }
+
+#chat-settings-open-modal .css-vubbuv {
+    fill: rgb(1, 67, 97) !important;
+}
+
+#chat-settings-open-modal {
+    display: grid;
+    position: relative;
+    top: 25px;
+    left: -385px !important;
+}
